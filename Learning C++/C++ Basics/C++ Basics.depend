@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1700157158 source:c:\users\kiit0001\desktop\coding\dsa\learning c++\c++ basics\main.cpp
+	<iostream>
+	<numeric>
+	<ctime>
+	<cmath>
+	<limits>
+
+1700160611 source:c:\users\kiit0001\desktop\coding\dsa\learning c++\c++ basics\oop.c
+
+1700161328 source:c:\users\kiit0001\desktop\coding\dsa\learning c++\c++ basics\src\shape.cpp
+	"Shape.h"
+
+1700161839 c:\users\kiit0001\desktop\coding\dsa\learning c++\c++ basics\include\shape.h
+
+1700161983 source:c:\users\kiit0001\desktop\coding\dsa\learning c++\c++ basics\src\circle.cpp
+	"Shape.h"
+	"Circle.h"
+	<cmath>
+
+1700161922 c:\users\kiit0001\desktop\coding\dsa\learning c++\c++ basics\include\circle.h
+
