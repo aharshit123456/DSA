@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-double cube(double num){
-    double result = num*num*num ;
-    return result;
-}
+//double cube(double num){
+//   double result = num*num*num ;
+//   return result;
+//}
 
 
-int main()
+float main()
 {
 //    char characterName[] = "Tom";
 //    int characterAge = 67;
@@ -48,7 +48,12 @@ int main()
 //    fgets(name,20,stdin);
 //    sayHi(name);
 
-    printf("Answer: %f", cube(3.0));
+//    printf("Answer: %f", cube(3.0));
+
+
+
+
+
     return 0;
 }
 
