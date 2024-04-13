@@ -1,26 +1,24 @@
 ## Graph Algo Problems
 
-- Graph Theory Introduction
-- Problems in Graph Theory
-- Depth First Search Algorithm
-- Breadth First Search Algorithm
-- Breadth First Search grid shortest path
-- Topological Sort Algorithm
-- Shortest/Longest path on a Directed Acyclic Graph (DAG)
-- Dijkstra's Shortest Path Algorithm
-- Bellman Ford Algorithm
-- Floyd Warshall All Pairs Shortest Path Algorithm
-- Bridges and Articulation points Algorithm
-- Tarjans Strongly Connected Components algorithm
-- Travelling Salesman Problem
-- Existence of Eulerian Paths and Circuits
-- Eulerian Path Algorithm
-- Prim's Minimum Spanning Tree Algorithm
-- Eager Prim's Minimum Spanning Tree Algorithm
-- Max Flow Ford Fulkerson
-- Unweighted Bipartite Matching
-- Mice and Owls problem
-- Elementary Math problem
-- Edmonds Karp Algorithm
-- Capacity Scaling
-- Dinic's Algorithm
+- [Problems in Graph Theory](graph.cpp)
+- [Depth First Search Algorithm](/graph/dfs.cpp)
+- [Breadth First Search Algorithm](/graph/bfs.cpp)
+- [Breadth First Search grid shortest path](/graph/bfcgridshort.cpp)
+- [Topological Sort Algorithm](/graph/topologicalsort.cpp)
+- [Shortest/Longest path on a Directed Acyclic Graph (DAG)](/graph/pathDAG.cpp)
+- [Dijkstra's Shortest Path Algorithm](/graph/dijkstra.cpp)
+- [Bellman Ford Algorithm](/graph/bellmanford.cpp)
+- [Floyd Warshall All Pairs Shortest Path Algorithm](/graph/flyodwarshall.cpp)
+- [Bridges and Articulation points Algorithm](/graph/articulation.cpp)
+- [Tarjans Strongly Connected Components algorithm](/graph/tarjans.cpp)
+- [Travelling Salesman Problem](/graph/travellingsalesman.cpp)
+- [Eulerian Paths and Circuits](/graph/eulerianpath.cpp)
+- [Prim's Minimum Spanning Tree Algorithm](/graph/prim.cpp)
+- [Eager Prim's Minimum Spanning Tree Algorithm](/graph/eagerprim.cpp)
+- [Max Flow Ford Fulkerson](/graph/fulkerson.cpp)
+- [Unweighted Bipartite Matching](/graph/bipartitematching.cpp)
+- [Mice and Owls problem](/graph/miccandowls.cpp)
+- [Elementary Math problem]()
+- [Edmonds Karp Algorithm](/graph/edmondskarp.cpp)
+- [Capacity Scaling](/graph/capacityscaling.cpp)
+- [Dinic's Algorithm](/graph/dinic.cpp)
