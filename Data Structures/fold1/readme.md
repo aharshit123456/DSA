@@ -1,0 +1,26 @@
+## Graph Algo Problems
+
+- Graph Theory Introduction
+- Problems in Graph Theory
+- Depth First Search Algorithm
+- Breadth First Search Algorithm
+- Breadth First Search grid shortest path
+- Topological Sort Algorithm
+- Shortest/Longest path on a Directed Acyclic Graph (DAG)
+- Dijkstra's Shortest Path Algorithm
+- Bellman Ford Algorithm
+- Floyd Warshall All Pairs Shortest Path Algorithm
+- Bridges and Articulation points Algorithm
+- Tarjans Strongly Connected Components algorithm
+- Travelling Salesman Problem
+- Existence of Eulerian Paths and Circuits
+- Eulerian Path Algorithm
+- Prim's Minimum Spanning Tree Algorithm
+- Eager Prim's Minimum Spanning Tree Algorithm
+- Max Flow Ford Fulkerson
+- Unweighted Bipartite Matching
+- Mice and Owls problem
+- Elementary Math problem
+- Edmonds Karp Algorithm
+- Capacity Scaling
+- Dinic's Algorithm

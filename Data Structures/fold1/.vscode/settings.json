@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "stack": "c",
+    "stdio.h": "c",
+    "stdbool.h": "c",
+    "stdlib.h": "c",
+    "queue": "c"
+  }
+}
