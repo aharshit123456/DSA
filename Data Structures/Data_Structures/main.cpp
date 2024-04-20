@@ -113,9 +113,8 @@ int main()
     Insertat(4,1);//4 2 3
     Insertat(5,2); // 4 5 2 3
     Print();
-
-//    Delete(2); //4 2 3
-//    Print();
+    Delete(2); //4 2 3
+    Print();
 
     Reverse();
     Print();
