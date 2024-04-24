@@ -3,7 +3,7 @@
 Problems in the real world are plotted in the Euclidean Space instead of Non Euclidean Graphs and Trees. Comp Geom is a field of Geometry and CSc that deal with solving geometrical problems in the Euclidean Space.
 
 ## Topics
-1. Convex Hull
+1. [Convex Hull](/convexhull.c)
 2. Line Sweep Method
 3. Closest Pair
 4. Planar Subdivision
