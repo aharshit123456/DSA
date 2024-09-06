@@ -5,5 +5,8 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp"
+    },
+    "files.exclude": {
+        "logseq/*": true
     }
 }
