@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 /*
 Leetcode Problems
@@ -36,6 +38,38 @@ struct ListNode
     int val;
     struct ListNode *next;
 };
+
+bool isPalindromeString(char *s)
+{
+
+    // Eliminate Spaces and use indexing efficiently
+    int space_count = 0;
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        if (s[i] == ' ')
+        {
+            space_count++;
+        }
+    }
+    space_count = strlen(s) - space_count;
+    printf("SPACE COUNT : %d \n", space_count);
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        if (tolower(s[i]) == ' ')
+        {
+            continue;
+        }
+        else
+        {
+            if (tolower(s[i]) != tolower(s[space_count - i - 2]))
+            {
+                printf("I : %d \n", i);
+                printf("S[i] : %c S[space_count - i - 1] : %c \n", tolower(s[i]), tolower(s[space_count - i - 1]));
+                return false;
+            }
+        }
+    }
+}
 
 void rotate(int *nums, int numsSize, int k)
 {
@@ -171,6 +205,7 @@ struct ListNode *INSERT_NEW_NODE(struct ListNode *head, int data)
     struct ListNode *new_node = (struct ListNode *)malloc(sizeof(struct ListNode));
     new_node->val = data;
     head->next = new_node;
+    new_node->next = NULL;
     return new_node;
 }
 
@@ -501,20 +536,117 @@ bool isPalindrome2(struct ListNode *head)
     return true;
 }
 
+void deleteNode(struct ListNode *node)
+{
+    struct ListNode *temp = node->next;
+    node->val = temp->val;
+    node->next = temp->next;
+    temp->next = NULL;
+    free(temp);
+}
+
+/*
+You are given the head of a linked list.
+Remove every node which has a node with a greater value anywhere to the right side of it.
+Return the head of the modified linked list.
+@params: head
+@return: struct ListNode*
+*/
+struct ListNode *removeNodes(struct ListNode *head)
+{
+    // identify the nodes and delete on the go
+    struct ListNode *temp = head;
+    struct ListNode *prev = head;
+    struct ListNode *next = head->next;
+    while (temp->next != NULL)
+    {
+        // check if the next node is greater than the head node
+        if (temp->val < next->val)
+        {
+            // delete the node
+            prev->next = next;
+            temp->next = NULL;
+            free(temp);
+            temp = next;
+            next = next->next;
+        }
+        else
+        {
+            // move to the next node
+            prev = temp;
+            temp = next;
+            next = next->next;
+        }
+    }
+}
+
+/*
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+@params: head, n
+@return: struct ListNode*
+*/
+struct ListNode *removeNthFromEnd(struct ListNode *head, int n)
+{
+    // EDGE CASE
+    if (head->next == NULL)
+    {
+        head = NULL;
+        return head;
+    }
+
+    // FIND LENGTH
+    struct ListNode *temp = head;
+    int count = 0;
+    while (temp != NULL)
+    {
+        count++;
+        temp = temp->next;
+    }
+
+    // FIND NTH NODE
+    int target = count - n;
+    struct ListNode *prev = head;
+    struct ListNode *current = head->next;
+    while (target != 1)
+    {
+        if (prev != NULL && current != NULL)
+        {
+            printf("PREV : %d CURRENT : %d \n", prev->val, current->val);
+            prev = prev->next;
+            current = current->next;
+        }
+        target--;
+    }
+
+    // DELETE NTH NODE
+    prev->next = current->next;
+    current->next = NULL;
+    free(current);
+
+    return head;
+}
+
 int main()
 {
     struct ListNode *head = (struct ListNode *)malloc(sizeof(struct ListNode));
     // head->val = NULL;
-    head->val = 1;
+    head->val = 2;
     struct ListNode *n1 = INSERT_NEW_NODE(head, 1);
-    struct ListNode *n2 = INSERT_NEW_NODE(n1, 2);
-    struct ListNode *n3 = INSERT_NEW_NODE(n2, 1);
-    // struct ListNode *n4 = INSERT_NEW_NODE(n3, 3);
+    // struct ListNode *n2 = INSERT_NEW_NODE(n1, 2);
+    // struct ListNode *n3 = INSERT_NEW_NODE(n2, 3);
+    // struct ListNode *n4 = INSERT_NEW_NODE(n3, 4);
     // n4->next = NULL;
-    // struct ListNode *n5 = INSERT_NEW_NODE(n4, 2);
-    // struct ListNode *n6 = INSERT_NEW_NODE(n5, 1);
+    // struct ListNode *n5 = INSERT_NEW_NODE(n4, 5);
+    // struct ListNode *n6 = INSERT_NEW_NODE(n5, 6);
+    // struct ListNode *n7 = INSERT_NEW_NODE(n6, 0);
 
-    // DISPLAY_NODES(head);
+    DISPLAY_NODES(head);
+    // deleteNode(n3);
+    DISPLAY_NODES(head);
+    // removeNodes(head);
+    removeNthFromEnd(head, 2);
+    DISPLAY_NODES(head);
+
     // struct ListNode *middle = deleteMiddle(head);
     // printf("MIDDLE NODE IS : %d \n", middle->val);
 
@@ -525,7 +657,7 @@ int main()
     // REVERSE_LIST(head);
     // DISPLAY_NODES(head);
     // reorderList(head);
-    DISPLAY_NODES(head);
+    // DISPLAY_NODES(head);
     // struct ListNode *new = rotateRight(head, 200);
     // DISPLAY_NODES(new);
 
@@ -535,7 +667,7 @@ int main()
     // rotate(nums, numsSize, 3);
     // DISPLAY_NODES(head);
 
-    isPalindrome(head) ? printf("TRUE \n") : printf("FALSE \n");
+    // isPalindrome(head) ? printf("TRUE \n") : printf("FALSE \n");
 
     return 0;
 }

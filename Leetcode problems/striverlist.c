@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
+#include <string.h>
+#include <stdbool.h>
+#include <ctype.h>
 void setZeroes(int **matrix, int matrixSize, int *matrixColSize)
 {
     int arr1[20][2];
@@ -121,6 +123,42 @@ int reverse(int x)
     return reversed;
 }
 
+bool isPalindromeString(char *s)
+{
+
+    // Eliminate Spaces and use indexing efficiently
+    int space_count = 0;
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        if (s[i] == ' ')
+        {
+            space_count++;
+        }
+    }
+    space_count = strlen(s) - space_count;
+    printf("SPACE COUNT : %d \n", space_count);
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        if (tolower(s[i]) == ' ')
+        {
+            continue;
+        }
+        else
+        {
+            if (tolower(s[i]) != tolower(s[space_count - i - 2]))
+            {
+                printf("I : %d \n", i);
+                printf("S[i] : %c S[space_count - i - 1] : %c \n", tolower(s[i]), tolower(s[space_count - i - 1]));
+                return false;
+            }
+        }
+    }
+}
+
+int maxFrequency(int *nums, int numsSize, int k)
+{
+}
+
 void main()
 {
 
@@ -166,4 +204,6 @@ void main()
             printf("\n");
         }
         */
+
+    isPalindromeString("A man, a plan, a canal: Panama") ? printf("TRUE \n") : printf("FALSE \n");
 }
