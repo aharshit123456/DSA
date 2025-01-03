@@ -1,0 +1,35 @@
+Starting program! 
+1th element: 1 
+2th element: 2 
+3th element: 3 
+4th element: 4 
+5th element: 5 
+_____________
+1th element: 1 
+2th element: 2 
+3th element: 4 
+4th element: 5 
+_____________
+1th element: 6 
+2th element: 1 
+3th element: 2 
+4th element: 4 
+5th element: 5 
+_____________
+1th element: 1 
+2th element: 2 
+3th element: 4 
+4th element: 5 
+_____________
+1th element: 1 
+2th element: 2 
+3th element: 4 
+_____________
+Count: 3 
+1th element: 4 
+2th element: 2 
+3th element: 1 
+_____________
+_____________
+_____________
+The LinkedList is not a palindrome!

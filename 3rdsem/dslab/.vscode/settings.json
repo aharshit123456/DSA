@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "logseq/*": true
+  },
+  "files.associations": {
+    "stdlib.h": "c",
+    "stdio.h": "c",
+    "linkedlist": "c"
+  }
+}
